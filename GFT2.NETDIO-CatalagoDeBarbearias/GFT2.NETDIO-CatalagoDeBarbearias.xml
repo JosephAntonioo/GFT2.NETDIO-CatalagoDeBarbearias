@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GFT2.NETDIO-CatalagoDeBarbearias</name>
+    </assembly>
+    <members>
+        <member name="M:GFT2.NETDIO_CatalagoDeBarbearias.Controllers.V1._0.BarbeariasController.Obter(System.Int32,System.Int32)">
+            <summary>
+            Buscar todas as barbearias de forma paginada
+            </summary>
+            <remarks>
+            Não é possivel retornar barbearias sem paginação
+            </remarks>
+            <param name="pagina">Indica qual pagina esta sendo consultada. Minimo 1</param>
+            <param name="quantidade">Indica a quantidade de registrtos por pagina. Minimo 1 e máximo 50</param>
+            <response code="200">Retorna a lista de barbearias</response>
+            <response code="204">Caso não haja barbearias</response>
+        </member>
+        <member name="M:GFT2.NETDIO_CatalagoDeBarbearias.Controllers.V1._0.BarbeariasController.Obter(System.Guid)">
+            <summary>
+            Busca uma barbearia pelo Id
+            </summary>
+            <param name="idBarbearia">Id da barbearia a ser buscada</param>
+            <response code="200">Retorna a barbearia filtrada</response>
+            <response code="204">Caso não haja barbearia com este id</response>
+        </member>
+        <member name="M:GFT2.NETDIO_CatalagoDeBarbearias.Controllers.V1._0.BarbeariasController.InserirBarbearia(GFT2.NETDIO_CatalagoDeBarbearias.Model.BarbeariaModel)">
+            <summary>
+            Inseri uma nova barbearia
+            </summary>
+            <param name="barbeariaModel">Objeto barbeariaModel</param>
+            <returns></returns>
+        </member>
+        <member name="M:GFT2.NETDIO_CatalagoDeBarbearias.Controllers.V1._0.BarbeariasController.AtualizarBarbearia(System.Guid,GFT2.NETDIO_CatalagoDeBarbearias.Model.BarbeariaModel)">
+            <summary>
+            Atualiza todos os campos da barbearia
+            </summary>
+            <param name="idBarbearia">Id da barbearia a ser atualizada</param>
+            <param name="barbearia">Objeto barbeariaModel a ser atualizado</param>
+            <returns></returns>
+        </member>
+        <member name="M:GFT2.NETDIO_CatalagoDeBarbearias.Controllers.V1._0.BarbeariasController.AtualizarDonoBarbearia(System.Guid,System.String)">
+            <summary>
+            Atualiza apenas o dono da barbearia
+            </summary>
+            <param name="idBarbearia">Id da barbearia a ter o dono alterado</param>
+            <param name="dono">Nome do novo dono</param>
+            <returns></returns>
+        </member>
+        <member name="M:GFT2.NETDIO_CatalagoDeBarbearias.Controllers.V1._0.BarbeariasController.ApagarBarbearia(System.Guid)">
+            <summary>
+            Apaga uma barbearia
+            </summary>
+            <param name="idBarbearia">Id da barbearia a ser deletada</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
